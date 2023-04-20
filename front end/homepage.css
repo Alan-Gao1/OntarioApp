@@ -3,9 +3,17 @@ body {
   }
 
 #covertext{
+<<<<<<< HEAD
+    color: white;
+    font-weight: bolder;
+    font-size: 9vw;
+  }
+  
+=======
   color: white;
   font-weight: bolder;
   font-size: 9vw;
 }
 
+>>>>>>> a89c8b61eec72b8963b8849e9e348b72caf36a8b
 
