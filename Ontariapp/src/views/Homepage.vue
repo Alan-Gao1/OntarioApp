@@ -1,46 +1,6 @@
 <template>
 
     <!-- nav -->
-    <nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="/homepage.html">
-            <img src="/images/logo.png">
-            </a>
-
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            </a>
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-            <a class="navbar-item" href="../homepage/homepage.html">
-                Home
-            </a>
-
-            <a class="navbar-item" href="../search uni/search-uni.html">
-                Search for universities
-            </a>
-
-
-            </div>
-
-            <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="buttons">
-                <a class="button is-info" href="../signup.html">
-                    <strong>Sign up</strong>
-                </a>
-                <a class="button has-background-primary has-text-white" href="../login.html">
-                    <strong>Log in</strong>
-                </a>
-                </div>
-            </div>
-            </div>
-        </div>
-        </nav>
 
       <!-- cover -->
       <h1 class="heading">Find Your<br>Calling</h1>
