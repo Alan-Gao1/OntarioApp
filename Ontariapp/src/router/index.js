@@ -13,6 +13,22 @@ const router = createRouter({
       name: 'search',
       component: () => import('../views/Search.vue')
     },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: () => import('../views/Signup.vue')
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/Login.vue')
+    },
+    {
+      path: '/dashboard',
+      name: 'dashboard',
+      component: () => import('../views/Dashboard.vue')
+    },
+    
   ]
 })
 

@@ -6,9 +6,9 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item" href="../homepage/homepage.html">
-                <img src="/images/logo.png">
-                </a>
+                <router-link to="/" class="navbar-item"><img src="/images/logo.png"></router-link>
+ 
+
     
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
@@ -29,12 +29,12 @@ import HelloWorld from './components/HelloWorld.vue'
                 <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                    <a class="button is-info" href="../signup.html">
+                    <router-link to="/signup" class="button is-info">
                         <strong>Sign up</strong>
-                    </a>
-                    <a class="button has-background-primary has-text-white" href="../login.html">
+                    </router-link>
+                    <router-link to="/login" class="button has-background-primary has-text-white">
                         <strong>Log in</strong>
-                    </a>
+                    </router-link>
                     </div>
                 </div>
                 </div>

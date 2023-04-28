@@ -1,57 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="login.css">
-</head>
-<body>
-    <nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="homepage/homepage.html">
-            <img src="./global images/logo.png">
-            </a>
-
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            </a>
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-            <a class="navbar-item" href="/homepage/homepage.html">
-                Home
-            </a>
-
-            <a class="navbar-item" href="../search uni/search-uni.html">
-                Search for universities
-            </a>
-
-
-            </div>
-
-            <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="buttons">
-                <a class="button is-info" href="signup.html">
-                    <strong>Sign up</strong>
-                </a>
-                <a class="button has-background-primary has-text-white" href="login.html">
-                    <strong>Log in</strong>
-                </a>
-                </div>
-            </div>
-            </div>
-        </div>
-    </nav>
+<template>
     <div class="columns is-flex is-vcentered is-centered" style="height:95vh">
         <div class="column"></div>
         <div class="column is-half">
@@ -104,5 +51,7 @@
         </div>
         <div class="column"></div>
     </div>
-</body>
-</html>
+</template>
+
+<style>
+</style>
