@@ -16,102 +16,452 @@
                             </router-link>
                     </div>
                 </div>
-                <div class="container has-background-light">
-                    <button type="button" class="collapsible">Personal Information</button>
-                        <div class="content">
-                            <section class="section">
-                                <div class="full-name">
-                                    <div class="field">
-                                        <label class="label">Full Name</label>
-                                        <div class="control">
-                                            <input class="input" type="text" placeholder="John Doe">
+                    <!-- <div class="ontario-app">
+                        <div class="container has-background-light">
+                            <button type="button" class="collapsible">Personal Information</button>
+                                <div class="content">
+                                    <section class="section">
+                                        <div class="full-name">
+                                            <div class="field">
+                                                <label class="label">Full Name</label>
+                                                <div class="control">
+                                                    <input class="input" type="text" placeholder="John Doe">
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
 
-                                <div class="date-of-birth mt-3">
-                                    <div class="field">
-                                        <label class="label">Date of Birth</label>
-                                        <div class="control">
-                                            <input class="input" type="date">
+                                        <div class="date-of-birth mt-3">
+                                            <div class="field">
+                                                <label class="label">Date of Birth</label>
+                                                <div class="control">
+                                                    <input class="input" type="date">
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
 
-                                <div class="address mt-3">
-                                    <div class="field">
-                                        <label class="label">Address</label>
-                                        <div class="control">
-                                            <input class="input" type="text" placeholder="1 Address rd.">
+                                        <div class="address mt-3">
+                                            <div class="field">
+                                                <label class="label">Address</label>
+                                                <div class="control">
+                                                    <input class="input" type="text" placeholder="1 Address rd.">
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
 
-                                <div class="phone-number mt-3">
-                                    <div class="field">
-                                        <label class="label">Phone Number</label>
-                                        <div class="control">
-                                            <input class="input" type="tel" placeholder="123-456-7890">
+                                        <div class="phone-number mt-3">
+                                            <div class="field">
+                                                <label class="label">Phone Number</label>
+                                                <div class="control">
+                                                    <input class="input" type="tel" placeholder="123-456-7890">
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
 
-                                <div class="legal-sex mt-3">
-                                    <div class="field">
-                                        <label class="label">Legal Sex</label>
-                                        <div class="control">
-                                            <label class="radio">
-                                              <input type="radio" name="answer">
-                                              Male
-                                            </label>
-                                            <label class="radio">
-                                              <input type="radio" name="answer">
-                                              Female
-                                            </label>
-                                          </div>
-                                    </div>
-                                </div>
-
-                                <div class="nationality mt-3">
-                                    <div class="field">
-                                        <label class="label">Nationality</label>
-                                        <div class="control">
-                                            <div class="select">
-                                                <select>
-                                                  <option>Select dropdown</option>
-                                                  <option>With options</option>
-                                                </select>
-                                              </div>
+                                        <div class="legal-sex mt-3">
+                                            <div class="field">
+                                                <label class="label">Legal Sex</label>
+                                                <div class="control">
+                                                    <label class="radio">
+                                                    <input type="radio" name="answer">
+                                                    Male
+                                                    </label>
+                                                    <label class="radio">
+                                                    <input type="radio" name="answer">
+                                                    Female
+                                                    </label>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
 
+                                        <div class="nationality mt-3">
+                                            <div class="field">
+                                                <label class="label">Nationality</label>
+                                                <div class="control">
+                                                    <div class="select">
+                                                        <select>
+                                                        <option>American Indian or Alaska Native</option>
+                                                        <option>Asian</option>
+                                                        <option>Black or African American</option>
+                                                        <option>Native Hawaiian or Other Pacific Islander</option>
+                                                        <option>White</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+                                    </section>
+                                </div>
                                 
+                            <button type="button" class="collapsible">Education</button>
+                                <div class="content">
+                                    <section class="section">
+                                        <div class="school-name">
+                                            <div class="field">
+                                                <label class="label">School Name</label>
+                                                <div class="control">
+                                                    <input class="input" type="text" placeholder="Ontario School">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="graduate mt-3">
+                                            <div class="field">
+                                                <label class="label">Did or will you graduate from this school?</label>
+                                                <div class="control">
+                                                    <label class="radio">
+                                                    <input type="radio" name="answer">
+                                                    Yes
+                                                    </label>
+                                                    <label class="radio">
+                                                    <input type="radio" name="answer">
+                                                    No
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                        
+
+                                        <div class="date-of-birth mt-3">
+                                            <div class="field">
+                                                <label class="label">Date of Graduation</label>
+                                                <div class="control">
+                                                    <input class="input" type="date">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="class-size mt-3">
+                                            <div class="field">
+                                                <label class="label">Graduating Class Size</label>
+                                                <div class="control">
+                                                    <input class="input" type="number" placeholder="80">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="gpa mt-3">
+                                            <div class="field">
+                                                <label class="label">Cumulative GPA</label>
+                                                <div class="control">
+                                                    <input class="input" type="number" placeholder="90">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="transcript mt-3">
+                                            <div class="field">
+                                                <label class="label">Upload Transcript</label>
+                                                <div class="control">
+                                                    <div class="upload-file">
+                                                        <input type="file" id="myFile" hidden>
+                                                        <label for="myFile">Choose File</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>    
+                                    </section>
+                                </div>
+
+                            <button type="button" class="collapsible">Activities</button>
+                                <div class="content">
+                                    <section class="section">
+                                        <div class="activty-header title is-5">
+                                            <b>Mention three activities in which you have taken part since grade 9 that best demonstrate your leadership, responsibility, and organization skills.</b>
+                                        </div>
+                                        <div class="activity">
+                                            <div class="activty-number title is-5">
+                                                Activity 1
+                                            </div>
+                                            <div class="activity-type">
+                                                <div class="field">
+                                                    <label class="label">Activity Type</label>
+                                                    <div class="control">
+                                                        <div class="select">
+                                                            <select>
+                                                                <option>Academic</option>
+                                                                <option>Art</option>
+                                                                <option>Athletics</option>
+                                                                <option>Career Oriented</option>
+                                                                <option>Community Service</option>
+                                                                <option>Computer/Technology</option>
+                                                                <option>Cultural</option>
+                                                                <option>Environmental</option>
+                                                                <option>Family Responsibilities</option>
+                                                                <option>Internship</option>
+                                                                <option>Music</option>
+                                                                <option>Robotics</option>
+                                                                <option>Work</option>
+                                                            </select>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="position-description mt-3">
+                                                <div class="field">
+                                                    <label class="label">Position/Leadership description</label>
+                                                    <div class="control">
+                                                        <input class="input" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="organization-name mt-3">
+                                                <div class="field">
+                                                    <label class="label">Organization Name</label>
+                                                    <div class="control">
+                                                        <input class="input" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="activity-description mt-3">
+                                                <div class="field">
+                                                    <label class="label">Activity Description</label>
+                                                    <div class="control">
+                                                        <textarea class="textarea"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="participation-grades mt-3">
+                                            <div class="field">
+                                                <label class="label">Participation Grade Levels</label>
+                                                <div class="control">
+                                                    <label class="checkbox">
+                                                        <input type="checkbox">
+                                                        Grade 9
+                                                    </label><br>
+                                                    <label class="checkbox mt-2">
+                                                        <input type="checkbox">
+                                                        Grade 10
+                                                    </label><br>
+                                                    <label class="checkbox mt-2">
+                                                        <input type="checkbox">
+                                                        Grade 11
+                                                    </label><br>
+                                                    <label class="checkbox mt-2">
+                                                        <input type="checkbox">
+                                                        Grade 12
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                        <div class="activity mt-6">
+                                            <div class="activty-number title is-5">
+                                                Activity 2
+                                            </div>
+                                            <div class="activity-type">
+                                                <div class="field">
+                                                    <label class="label">Activity Type</label>
+                                                    <div class="control">
+                                                        <div class="select">
+                                                            <select>
+                                                                <option>Academic</option>
+                                                                <option>Art</option>
+                                                                <option>Athletics</option>
+                                                                <option>Career Oriented</option>
+                                                                <option>Community Service</option>
+                                                                <option>Computer/Technology</option>
+                                                                <option>Cultural</option>
+                                                                <option>Environmental</option>
+                                                                <option>Family Responsibilities</option>
+                                                                <option>Internship</option>
+                                                                <option>Music</option>
+                                                                <option>Robotics</option>
+                                                                <option>Work</option>
+                                                            </select>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="position-description mt-3">
+                                                <div class="field">
+                                                    <label class="label">Position/Leadership description</label>
+                                                    <div class="control">
+                                                        <input class="input" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="organization-name mt-3">
+                                                <div class="field">
+                                                    <label class="label">Organization Name</label>
+                                                    <div class="control">
+                                                        <input class="input" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="activity-description mt-3">
+                                                <div class="field">
+                                                    <label class="label">Activity Description</label>
+                                                    <div class="control">
+                                                        <textarea class="textarea"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="participation-grades mt-3">
+                                            <div class="field">
+                                                <label class="label">Participation Grade Levels</label>
+                                                <div class="control">
+                                                    <label class="checkbox">
+                                                        <input type="checkbox">
+                                                        Grade 9
+                                                    </label><br>
+                                                    <label class="checkbox mt-2">
+                                                        <input type="checkbox">
+                                                        Grade 10
+                                                    </label><br>
+                                                    <label class="checkbox mt-2">
+                                                        <input type="checkbox">
+                                                        Grade 11
+                                                    </label><br>
+                                                    <label class="checkbox mt-2">
+                                                        <input type="checkbox">
+                                                        Grade 12
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                        <div class="activity mt-6">
+                                            <div class="activty-number title is-5">
+                                                Activity 3
+                                            </div>
+                                            <div class="activity-type">
+                                                <div class="field">
+                                                    <label class="label">Activity Type</label>
+                                                    <div class="control">
+                                                        <div class="select">
+                                                            <select>
+                                                                <option>Academic</option>
+                                                                <option>Art</option>
+                                                                <option>Athletics</option>
+                                                                <option>Career Oriented</option>
+                                                                <option>Community Service</option>
+                                                                <option>Computer/Technology</option>
+                                                                <option>Cultural</option>
+                                                                <option>Environmental</option>
+                                                                <option>Family Responsibilities</option>
+                                                                <option>Internship</option>
+                                                                <option>Music</option>
+                                                                <option>Robotics</option>
+                                                                <option>Work</option>
+                                                            </select>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="position-description mt-3">
+                                                <div class="field">
+                                                    <label class="label">Position/Leadership description</label>
+                                                    <div class="control">
+                                                        <input class="input" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="organization-name mt-3">
+                                                <div class="field">
+                                                    <label class="label">Organization Name</label>
+                                                    <div class="control">
+                                                        <input class="input" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="activity-description mt-3">
+                                                <div class="field">
+                                                    <label class="label">Activity Description</label>
+                                                    <div class="control">
+                                                        <textarea class="textarea"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="participation-grades mt-3">
+                                            <div class="field">
+                                                <label class="label">Participation Grade Levels</label>
+                                                <div class="control">
+                                                    <label class="checkbox">
+                                                        <input type="checkbox">
+                                                        Grade 9
+                                                    </label><br>
+                                                    <label class="checkbox mt-2">
+                                                        <input type="checkbox">
+                                                        Grade 10
+                                                    </label><br>
+                                                    <label class="checkbox mt-2">
+                                                        <input type="checkbox">
+                                                        Grade 11
+                                                    </label><br>
+                                                    <label class="checkbox mt-2">
+                                                        <input type="checkbox">
+                                                        Grade 12
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        
+                                    </section>
+                                </div>
+                        </div>
+                    </div> -->
+
+                    <div class="dashboard">
+                        <div class="container has-background-light">
+                            <section class="section">
+                                <div class="title">Dashboard</div>
+                                <div class="card">
+                                    <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-left">
+                                        <figure class="image is-48x48">
+                                            <img class="is-rounded" src="/images/uoft-logo.png" alt="Placeholder image">
+                                        </figure>
+                                        </div>
+                                        <div class="media-content">
+                                        <p class="title is-2"><a href="#">University of Toronto</a></p>
+                                        </div>
+                                    </div>
+                                
+                                    </div>
+                                </div>
                             </section>
+                        </div>
                     </div>
-                </div>
             </section>
 
 </template>
 
 <script>
-    export default{
-        created() {
-            var coll = document.getElementsByClassName("collapsible");
-            var i;
-            for (i = 0; i < coll.length; i++) {
-                coll[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (content.style.display === "block") {
-                    content.style.display = "none";
-                    } else {
-                    content.style.display = "block";
-                    }
-                });
-            }
-        }
-    }
+    // export default{
+    //     created() {
+    //         var coll = document.getElementsByClassName("collapsible");
+    //         var i;
+    //         for (i = 0; i < coll.length; i++) {
+    //             coll[i].addEventListener("click", function() {
+    //                 this.classList.toggle("active");
+    //                 var content = this.nextElementSibling;
+    //                 if (content.style.display === "block") {
+    //                 content.style.display = "none";
+    //                 } else {
+    //                 content.style.display = "block";
+    //                 }
+    //             });
+    //         }
+    //     }
+    // }
 
 
 
@@ -119,8 +469,17 @@
 </script>
 
 <style>
+    .upload-file label{
+        background-color: #209cee;
+        color: white;
+        padding: 0.5rem;
+        font-family: sans-serif;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        margin-top: 1rem;
+    }
     /* Style the button that is used to open and close the collapsible content */
-.collapsible {
+/* .collapsible {
   background-color: #eee;
   color: #444;
   cursor: pointer;
@@ -130,18 +489,18 @@
   text-align: left;
   outline: none;
   font-size: 15px;
-}
+} */
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .collapsible:hover {
+/* .active, .collapsible:hover {
   background-color: #ccc;
-}
+} */
 
 /* Style the collapsible content. Note: hidden by default */
-.content {
+/* .content {
   padding: 0 18px;
   display: none;
   overflow: hidden;
   background-color: #f1f1f1;
-}
+} */
 </style>

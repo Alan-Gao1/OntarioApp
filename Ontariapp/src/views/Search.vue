@@ -20,7 +20,7 @@
                           <div class="media">
                             <div class="media-left">
                               <figure class="image is-48x48">
-                                <img src="./images/uoft-logo.png">
+                                <img src="/images/uoft-logo.png">
                               </figure>
                             </div>
                             <div class="media-content">
@@ -44,7 +44,7 @@
                       </div>
                 </div>
                 <div class="column">
-                    <img src="/search uni/images/uoft.png">
+                    <img src="/images/uoft.png">
                 </div>
             </div>
         </section>
