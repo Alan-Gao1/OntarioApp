@@ -421,20 +421,27 @@
                     <div class="dashboard">
                         <div class="container has-background-light">
                             <section class="section">
-                                <div class="title">Dashboard</div>
-                                <div class="card">
-                                    <div class="card-content">
-                                    <div class="media">
-                                        <div class="media-left">
-                                        <figure class="image is-48x48">
-                                            <img class="is-rounded" src="/images/uoft-logo.png" alt="Placeholder image">
-                                        </figure>
-                                        </div>
-                                        <div class="media-content">
-                                        <p class="title is-2"><a href="#">University of Toronto</a></p>
-                                        </div>
+                                <div class="is-flex is-justify-content-space-between">
+                                    <div>
+                                        <div class="title">Dashboard</div>
+                                        <div class="subtitle is-6">Select a university to continue their application or start a new one!</div>
                                     </div>
-                                
+                                    <button class="button is-info">Apply Now</button>
+                                </div>
+                                <div class="card mt-5">
+                                    <div class="card-content">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-48x48">
+                                                    <img class="is-rounded" src="/images/uoft-logo.png" alt="Placeholder image">
+                                                </figure>
+                                                </div>
+                                                <div class="media-content">
+                                                <p class="title is-2"><a href="#">University of Toronto</a></p>
+                                            </div>
+                                            <button class="delete"></button>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </section>
