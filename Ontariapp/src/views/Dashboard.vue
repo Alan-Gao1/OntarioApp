@@ -7,14 +7,6 @@
                     <div class="column">
                         <button class="button is-info is-fullwidth">Dashboard</button>
                     </div>
-                    <div class="column">
-                        <button class="button is-info is-fullwidth">Communications</button>
-                    </div>
-                    <div class="column">
-                        <router-link to="/search" class="button is-info is-fullwidth">
-                                University Search
-                            </router-link>
-                    </div>
                 </div>
                     <!-- <div class="ontario-app">
                         <div class="container has-background-light">
@@ -437,7 +429,8 @@
                                                 </figure>
                                                 </div>
                                                 <div class="media-content">
-                                                <p class="title is-2"><a href="#">University of Toronto</a></p>
+                                                <p class="title is-3"><a href="#">University of Toronto</a></p>
+                                                <p class="subtitle is-6">Results have been released to your registered email account.</p>
                                             </div>
                                             <button class="delete"></button>
                                         </div>
