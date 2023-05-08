@@ -33,6 +33,11 @@ const router = createRouter({
       name: 'apply',
       component: () => import('../views/SelectUniApplication.vue')
     },
+    {
+      path: '/application',
+      name: 'application',
+      component: () => import('../views/Application.vue')
+    },
     
   ]
 })
