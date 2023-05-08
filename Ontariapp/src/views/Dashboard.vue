@@ -2,15 +2,15 @@
             <section class="section">
                 <div class="columns">
                     <div class="column">
-                        <button class="button is-info is-fullwidth">OntarioApp</button>
+                        <button class="button is-info is-fullwidth" v-on:click="openOntarioapp">OntarioApp</button>
                     </div>
                     <div class="column">
-                        <button class="button is-info is-fullwidth">Dashboard</button>
+                        <button class="button is-info is-fullwidth" v-on:click="openDash">Dashboard</button>
                     </div>
                 </div>
-                    <!-- <div class="ontario-app">
+                    <div class="ontario-app" id="ontarioapp">
                         <div class="container has-background-light">
-                            <button type="button" class="collapsible">Personal Information</button>
+                            <button type="button" class="collapsible" v-on:click="toggleColapsible($event)">Personal Information</button>
                                 <div class="content">
                                     <section class="section">
                                         <div class="full-name">
@@ -86,7 +86,7 @@
                                     </section>
                                 </div>
                                 
-                            <button type="button" class="collapsible">Education</button>
+                            <button type="button" class="collapsible" v-on:click="toggleColapsible($event)">Education</button>
                                 <div class="content">
                                     <section class="section">
                                         <div class="school-name">
@@ -156,7 +156,7 @@
                                     </section>
                                 </div>
 
-                            <button type="button" class="collapsible">Activities</button>
+                            <button type="button" class="collapsible" v-on:click="toggleColapsible($event)">Activities</button>
                                 <div class="content">
                                     <section class="section">
                                         <div class="activty-header title is-5">
@@ -408,9 +408,9 @@
                                     </section>
                                 </div>
                         </div>
-                    </div> -->
+                    </div>
 
-                    <div class="dashboard">
+                    <div class="dashboard is-hidden" id="dashboard">
                         <div class="container has-background-light">
                             <section class="section">
                                 <div class="is-flex is-justify-content-space-between">
@@ -445,27 +445,39 @@
 </template>
 
 <script>
-    // export default{
-    //     created() {
-    //         var coll = document.getElementsByClassName("collapsible");
-    //         var i;
-    //         for (i = 0; i < coll.length; i++) {
-    //             coll[i].addEventListener("click", function() {
-    //                 this.classList.toggle("active");
-    //                 var content = this.nextElementSibling;
-    //                 if (content.style.display === "block") {
-    //                 content.style.display = "none";
-    //                 } else {
-    //                 content.style.display = "block";
-    //                 }
-    //             });
-    //         }
-    //     }
-    // }
+    export default{
+        data() {
+            return {}
+        },
+        methods: {
+            openDash() {
+                let dash = document.getElementById("dashboard");
+                let ontariapp = document.getElementById("ontarioapp");
 
+                dash.classList.remove("is-hidden");
+                ontariapp.classList.add("is-hidden");
+            },
+            openOntarioapp() {
+                let dash = document.getElementById("dashboard");
+                let ontariapp = document.getElementById("ontarioapp");
 
+                ontariapp.classList.remove("is-hidden");
+                dash.classList.add("is-hidden");
+            },
+            toggleColapsible(event) {
+                let button = event.target;
 
+                button.classList.toggle("active");
+                let content = button.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                     content.style.display = "block";
+                }
+            }
+        }
 
+    }
 </script>
 
 <style>
@@ -479,28 +491,28 @@
         margin-top: 1rem;
     }
     /* Style the button that is used to open and close the collapsible content */
-/* .collapsible {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-} */
+    .collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-/* .active, .collapsible:hover {
-  background-color: #ccc;
-} */
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .collapsible:hover {
+    background-color: #ccc;
+    }
 
-/* Style the collapsible content. Note: hidden by default */
-/* .content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-} */
+    /* Style the collapsible content. Note: hidden by default */
+    .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    }
 </style>
