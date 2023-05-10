@@ -1,6 +1,5 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
@@ -25,12 +24,15 @@ import HelloWorld from './components/HelloWorld.vue'
 
                 <div class="navbar-end">
                     <div class="navbar-item">
-                        <div class="buttons">
+                        <div class="buttons" id="login">
                             <router-link to="/signup" class="button is-info">
                                 <strong>Sign up</strong>
                             </router-link>
                             <router-link to="/login" class="button has-background-primary has-text-white">
                                 <strong>Log in</strong>
+                            </router-link>
+                            <router-link to="/" class="button is-info has-text-white is-hidden"> 
+                                <strong>Logout</strong>
                             </router-link>
                         </div>
                     </div>
