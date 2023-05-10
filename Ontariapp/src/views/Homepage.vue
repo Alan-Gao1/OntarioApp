@@ -217,7 +217,6 @@
   
   #footer-text{
     font-size: 1.5vw;
-    padding: 8vw;
   }
   
   * {

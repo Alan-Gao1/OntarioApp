@@ -407,6 +407,13 @@
                                         
                                     </section>
                                 </div>
+                        
+                    
+                            
+                        </div>
+
+                        <div class="container mt-3">
+                            <button class="button is-primary is-fullwidth">Save</button>
                         </div>
                     </div>
 
@@ -440,6 +447,7 @@
                             </section>
                         </div>
                     </div>
+
             </section>
 
 </template>
