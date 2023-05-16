@@ -1,5 +1,4 @@
-
-
+/* Covertext tag is for the text on the image below the "find your calling" splash text */
 #covertext-title{
     color: white;
     font-weight: bolder;
@@ -13,7 +12,7 @@
     font-size: 3vw;
     margin-left: 2vw;
   }
-
+/* why-oa tag is for the why Ontarioapp text below the covertext */
   #why-oa-title{
     color: white;
     font-weight: bolder;
@@ -26,10 +25,11 @@
     /* font-weight: bolder; */
     font-size: 2vw;
   }
-  
+
+  /* transition time for switching directions on the belt of images*/
   * {
     box-sizing: border-box;
-    transition: all 0.2s;
+    transition: all 1;
   }
   
   body {
@@ -37,7 +37,8 @@
     overflow: hidden;
     /* font-family: "Varela Round", sans-serif; */
   }
-  
+
+  /* font sizes and colour displays for splash text */
   body .heading {
     font-size: 8rem;
     margin: 7rem 3rem;
@@ -60,7 +61,8 @@
     border: 1px solid #cb904d31;
     z-index: -20;
   }
-  
+
+  /* keyframes for picture conveyor belt */
   @keyframes move {
     from {
       transform: rotate(45deg) translate(-120px, 60px);
@@ -69,6 +71,8 @@
       transform: rotate(45deg) translate(-120px, -290px);
     }
   }
+
+  /* structure for picture belt */
   body .container {
     margin: 0px;
     position: fixed;
@@ -95,6 +99,7 @@
     border-radius: inherit;
   }
   
+  /* responsiveness */
   @media screen and (max-width: 1000px) {
     body .heading {
       margin: 9rem 3rem;
@@ -102,6 +107,7 @@
     }
   }
   
+  /* responsiveness dor picture belt */
   @media screen and (max-width: 780px) {
     body .heading {
       font-size: 4rem;
@@ -141,3 +147,11 @@
     }
   }
   
+  @media screen and (max-width: 1024px){
+    .navbarBasicExample{
+      display: none;
+    }
+    .hamborg{
+      display: none;
+    }
+  }
