@@ -19,8 +19,8 @@ async function main() {
         // lists the databases.
         await  listDatabases(client);
 
-        //IMPORTANT: while the id is a number, it MUST BE A STRING
-        await findUniID(client, '1');
+        //IMPORTANT: the id is a number NOT A STRING
+        await findUniID(client, 13);
 
     } catch (e) {
         console.error(e);
