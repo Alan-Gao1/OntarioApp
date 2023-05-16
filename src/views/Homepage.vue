@@ -1,45 +1,6 @@
 <template>
 
     <!-- nav -->
-<<<<<<< HEAD:front end/homepage.html
-    <nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
-                <img src="logo.png">
-            </a>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" onclick="toggleShow()" id="hamIcon">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item">
-                    Home
-                </a>
-
-                <a class="navbar-item">
-                    Search for universities
-                </a>
-            </div>
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="buttons">
-                        <a class="button is-info" href="signup.html">
-                            <strong>Sign up</strong>
-                        </a>
-                        <a class="button has-background-primary has-text-white" href="login.html">
-                            <strong>Log in</strong>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </nav>
-=======
->>>>>>> 0fef26559e15f6013f3fa9abaeae6830f9273916:src/views/Homepage.vue
 
         <div id="hamborg" class="is-hidden has-background-light" style="margin-left: 70%; z-index: -1; position: relative;">
             <a class="navbar-item">
@@ -228,28 +189,6 @@
             <img src="/images/light-rectangle.png">
           </figure>  
         </footer>
-<<<<<<< HEAD:front end/homepage.html
-</body>
-
-<script>
-    let ham = document.querySelector("#hamborg");
-    let hamIcon = document.querySelector("#hamIcon");
-    function toggleShow(){
-        if(ham.classList.contains("is-hidden")){
-            ham.classList.remove("is-hidden");
-        }else{
-            ham.classList.add("is-hidden")
-        }
-        if(hamIcon.contains("is-active")){
-            hamIcon.classList.remove("is-active");
-        }else{
-            hamIcon.classList.add("is-active");
-        }
-    }
-</script>
-
-</html>
-=======
 
 
 
@@ -408,4 +347,3 @@
 
 
 </style>
->>>>>>> 0fef26559e15f6013f3fa9abaeae6830f9273916:src/views/Homepage.vue
