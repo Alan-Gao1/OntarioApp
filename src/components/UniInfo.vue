@@ -6,17 +6,17 @@
                     <div class="media">
                     <div class="media-left">
                         <figure class="image is-48x48">
-                        <img src="/images/uoft-logo.png">
+                        <img :src=icon>
                         </figure>
                     </div>
                     <div class="media-content">
-                        <p class="title is-2">University of Toronto</p>
+                        <p class="title is-2">{{name}}</p>
                     </div>
                     </div>
                 
                     <div class="content">
-                    <p class="university-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ipsum nesciunt necessitatibus maiores magnam ducimus porro laboriosam numquam amet non a repellendus earum modi consectetur distinctio quis esse doloribus aperiam quos vero quaerat, ut nihil. Placeat saepe.</p>
-                    <p class="uni-website">Visit <a href="https://www.utoronto.ca/">UofT's website!</a></p>
+                    <p class="university-description">{{description}}</p>
+                    <p class="uni-website">Visit <a :href=site>{{name}}'s website!</a></p>
                     <p class="subtitle">Popular Programs</p>
                     <div class="program-list">
                         <ul>
@@ -30,7 +30,13 @@
                 </div>
         </div>
         <div class="column">
-            <img src="/images/uoft.png">
+            <img :src=image>
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    props: ['name', 'icon', 'site', 'image', 'description', 'programs']
+}
+</script>
