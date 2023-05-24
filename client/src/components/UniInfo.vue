@@ -19,10 +19,10 @@
                     <p class="uni-website">Visit <a :href=site>{{name}}'s website!</a></p>
                     <p class="subtitle">Popular Programs</p>
                     <div class="program-list">
-                        <ul>
-                            <li>lorem</li>
-                            <li>ipsum</li>
-                            <li>dolor</li>
+                        <ul id="programlist">
+                            <li v-for="program in programs" :key=program>
+                                {{program}}
+                            </li>
                         </ul>
                     </div>
                     </div>
@@ -37,6 +37,13 @@
 
 <script>
 export default {
-    props: ['name', 'icon', 'site', 'image', 'description', 'programs']
+    props: {
+        name: String,
+        icon: String,
+        site: String,
+        image: String,
+        description: String,
+        programs: Array
+    }
 }
 </script>

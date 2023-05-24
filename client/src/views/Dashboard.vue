@@ -427,7 +427,7 @@
                                     </div>
                                     <button class="button is-info">Apply Now</button>
                                 </div>
-                                <UniCard/>
+                                <UniCard name="University of ur mom" icon="/images/uoft-logo.png" isodate="2023-05-25T13:08:03+0000"/>
                             </section>
                         </div>
                     </div>
