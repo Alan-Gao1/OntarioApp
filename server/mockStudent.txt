@@ -1,0 +1,60 @@
+   {
+        "First Name": "Alonious",
+        "Last Name": "Gao",
+        "Applicant ID": "AG123456",
+        "University Applications": [
+            [
+                {
+                    "UniversityID": 12,
+                    "Programs": [
+                        "Bachelor of Computer Science",
+                        "Bachelor of Engineering"
+                    ],
+                    "UniversityName": "University of Waterloo",
+                    "ApplicationDate": "2023-05-08"
+                }
+            ],
+            [
+                {
+                    "UniversityID": 7,
+                    "Programs": [
+                        "Bachelor of Business Administration",
+                        "Bachelor of Commerce"
+                    ],
+                    "UniversityName": "University of Toronto",
+                    "ApplicationDate": "2023-05-08"
+                }
+            ],
+            [
+                {
+                    "UniversityID": 9,
+                    "Programs": [
+                        "Bachelor of Arts",
+                        "Bachelor of Science"
+                    ],
+                    "UniversityName": "Queen's University",
+                    "ApplicationDate": "2023-05-08"
+                }
+            ]
+        ],
+        "Date of Birth": "1998-12-15",
+        "First Language": "English",
+        "Ethnicity": "Asian",
+        "Religion": "None",
+        "Sexual Orientation": "Heterosexual",
+        "Disability": "None",
+        "Address": [
+            "123 Main Street",
+            "Toronto",
+            "Ontario",
+            "Canada"
+        ],
+        "Academic Background": [
+            {
+                "Degree": "High School Diploma",
+                "School": "Central High School",
+                "StartDate": "2016-06-30",
+                "EndDate": "2020-06-30"
+            }
+        ]
+    }
