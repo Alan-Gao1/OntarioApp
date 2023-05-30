@@ -15,76 +15,76 @@
       <h1 class="heading">Find Your<br>Calling</h1>
       <div class="container">
           <div class="child-container">
-              <img src="https://picsum.photos/100" alt="pic 1">
+              <img src="https://www.narcity.com/media-library/image.jpg?id=25909356&width=1245&height=700&coordinates=0%2C0%2C0%2C0" alt="pic 1">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/200" alt="pic 2">
+              <img src="https://www.narcity.com/media-library/image.jpg?id=26005848&width=1245&height=700&quality=85&coordinates=0%2C110%2C0%2C110" alt="pic 2">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/300" alt="pic 3">
+              <img src="https://scontent-lga3-2.xx.fbcdn.net/v/t1.6435-9/97016111_10157714196399405_6214892753340334080_n.jpg?stp=dst-jpg_p552x414&_nc_cat=107&ccb=1-7&_nc_sid=2d5d41&_nc_ohc=xtLnphjyU0AAX_du8w_&_nc_ht=scontent-lga3-2.xx&edm=AOxfFlQEAAAA&oh=00_AfDXU5shyQ0suzJ0kSgK3DhdTtpw34_qVZe_vEKDwdxTEA&oe=649D76C5" alt="pic 3">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/400" alt="pic 4">
+              <img src="https://scontent-lga3-2.xx.fbcdn.net/v/t1.18169-9/14915317_10153842784326401_2497182026098173606_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=19026a&_nc_ohc=7H5IMqHP4a4AX8_Fzfm&_nc_ht=scontent-lga3-2.xx&oh=00_AfBntaM9cilYP77hZ-uDIHzvKD0G8vMF_rA5lB_jjDoQ2w&oe=649D4EF6" alt="pic 4">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/500" alt="pic 5">
+              <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.6435-9/128788231_10159032358161926_6758674474456988493_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=e3f864&_nc_ohc=WQrnKyWzH5EAX8MG7On&_nc_ht=scontent-lga3-1.xx&oh=00_AfBMinJMqzcseUh_7hLjX0xM9KH0qOUP3MSqKigYCTekGA&oe=649D679F" alt="pic 5">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/600" alt="pic 6">
+              <img src="https://i.guim.co.uk/img/media/622160dbe93cc32e08eedd51e9ac2e0a90babbf1/0_200_3000_1800/master/3000.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=9229d580babe82d8679391160d98b660" alt="pic 6">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/150" alt="pic 7">
+              <img src="https://afdverify.psacunion.ca/sites/psac/files/gettyimages-815408870.jpg" alt="pic 7">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/250" alt="pic 8">
+              <img src="https://cdn-res.keymedia.com/cms/images/ca/126/0395_637683596911490862.png" alt="pic 8">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/350" alt="pic 9">
+              <img src="https://uwaterloo.ca/stratford-school-of-interaction-design-and-business/sites/ca.stratford-school-of-interaction-design-and-business/files/styles/body-500px-wide/public/uploads/images/uws_building_02.jpg?itok=LjuFft5D" alt="pic 9">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/450" alt="pic 10">
+              <img src="https://www.ontariouniversitiesinfo.ca/assets/files/images/uc_c_1080x700.jpg" alt="pic 10">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/550" alt="pic 11">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/University_College%2C_Western_University.jpg" alt="pic 11">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/650" alt="pic 12">
+              <img src="https://www.uottawa.ca/study/sites/g/files/bhrskd296/files/styles/max_width_l_1470px/public/2021-10/6D4A0713B_0.jpg?itok=3Fi-Vsz3" alt="pic 12">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/110" alt="pic 13">
+              <img src="https://brocku.ca/brock-news/wp-content/uploads/2021/05/Aerial-campus-walkway-Cairns-RS-1600x1161.jpg?x70330" alt="pic 13">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/210" alt="pic 14">
+              <img src="https://mbiotech.uoguelph.ca/sites/default/files/styles/simplecrop_-_page_banner/public/images/banners/hero-about-university.jpg?itok=R1bVS8Ve&sc=c4ee7045fdea15a7f964202e31d13737" alt="pic 14">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/310" alt="pic 15">
+              <img src="https://www.thestar.com/content/dam/thestar/opinion/contributors/2021/04/11/laurentian-university-is-in-peril-and-its-not-alone-governments-have-systematically-underfunded-universities-and-colleges-across-the-country-for-decades/laurentian_university2.jpg" alt="pic 15">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/410" alt="pic 16">
+              <img src="https://www.ontariouniversitiesinfo.ca/assets/files/images/feature%20image%203.jpg" alt="pic 16">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/510" alt="pic 17">
+              <img src="https://blog.clvgroup.com/wp-content/uploads/Choosing-Between-uOttawa-and-Carleton-University.jpg" alt="pic 17">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/610" alt="pic 18">
+              <img src="https://www.wlu.ca/about/governance/senior-leadership/vice-president-academic/assets/images/campus-banner.jpg" alt="pic 18">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/125" alt="pic 19">
+              <img src="https://www.ontariouniversitiesinfo.ca/assets/files/images/ptbo%20sunset.jpeg" alt="pic 19">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/225" alt="pic 20">
+              <img src="https://pbs.twimg.com/media/EYoy3QTWAAMIEoh.jpg" alt="pic 20">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/325" alt="pic 21">
+              <img src="https://shared.ontariotechu.ca/shared/ontario-tech/documents/viewbooks/2022/digital-viewbook-block-cover.jpg" alt="pic 21">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/425" alt="pic 22">
+              <img src="https://www.timeshighereducation.com/sites/default/files/styles/the_breaking_news_image_style/public/legislative_assembly_of_ontario.jpg?itok=C6BJJRG0" alt="pic 22">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/525" alt="pic 23">
+              <img src="https://www.studentworldonline.com/userfiles/images/kingston%20ontario%20queen's%20university.jpg" alt="pic 23">
           </div>
           <div class="child-container">
-              <img src="https://picsum.photos/625" alt="pic 24">
+              <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/b7/75/b4/university-of-western.jpg?w=1200&h=-1&s=1" alt="pic 24">
           </div>
       </div>
 
