@@ -65,6 +65,8 @@
 
 <style scoped>
 @import 'https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css';
+
+/**keeps the hamburger menu on the rightmost side of the page */
 .navbar-brand, .navbar-tabs {
     justify-content: space-between;
   }
