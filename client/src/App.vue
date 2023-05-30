@@ -65,4 +65,7 @@
 
 <style scoped>
 @import 'https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css';
+.navbar-brand, .navbar-tabs {
+    justify-content: space-between;
+  }
 </style>
