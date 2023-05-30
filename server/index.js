@@ -1,11 +1,54 @@
 const express = require('express');
+const session = require('express-session');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
+require('dotenv').config();
 const PORT = 8000;
 
-const { OAuth2Client } = require('google-auth-library')
-const client = new OAuth2Client("YOUR_GOOGLE_CLIENT_ID")
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = process.env.MONGO_URI;
+
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  }
+});
+let db;
+
+(async () => {
+  try {
+    // Connect the client to the server	(optional starting in v4.7)
+    await client.connect();
+    // Send a ping to confirm a successful connection
+    await client.db("admin").command({ ping: 1 });
+    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+  } finally {
+    // Ensures that the client will close when you finish/error
+    // await client.close();
+  }
+})();
+
+
+var passport = require('passport');
+var LocalStrategy = require('passport-local');
+
+passport.use(new LocalStrategy(function verify(username, password, cb) {
+  db.get('SELECT * FROM users WHERE username = ?', [ username ], function(err, user) {
+    if (err) { return cb(err); }
+    if (!user) { return cb(null, false, { message: 'Incorrect username or password.' }); }
+
+    crypto.pbkdf2(password, user.salt, 310000, 32, 'sha256', function(err, hashedPassword) {
+      if (err) { return cb(err); }
+      if (!crypto.timingSafeEqual(user.hashed_password, hashedPassword)) {
+        return cb(null, false, { message: 'Incorrect username or password.' });
+      }
+      return cb(null, user);
+    });
+  });
+}));
 
 
 app.use(bodyParser.json());
@@ -16,14 +59,36 @@ app.get('/', (req, res) => {
   res.send(`Hi! Server is listening on port ${PORT}`)
 });
 
+app.get('/login', (req, res) => {
+  req.body.email
+
+  res.send(false);
+});
+
+app.get('/universities', async(req, res) => {
+  res.send(await getUnis());
+});
+
 // listen on the port
 app.listen(PORT, function () {
     console.info('Express server running on port:', PORT);
 });
 
+
+
+const getUnis = async () => {
+  // await client.connect();
+  let unis = await client.db('Ontariapp').collection('Universities').find({}).toArray();
+  unis.shift();
+
+  return unis;
+}
+
+
+
 // Call this function to validate the JWT credential sent from client-side
 async function verifyCredentials(credential) {
-  const ticket = await client.verifyIdToken({
+  const ticket = await Oauth.verifyIdToken({
     idToken: credential,
   })
   const payload = ticket.getPayload()

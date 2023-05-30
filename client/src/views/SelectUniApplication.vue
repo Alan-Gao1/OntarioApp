@@ -1,10 +1,28 @@
 <template>
     <section class="section">
-        <div class="columns">
-            <UniApplyCard icon="https://bulma.io/images/placeholders/1280x960.png" name="University of Ohio" site="https://www.ohio.edu/"/>
+        <div class="columns is-multiline">
+            <UniApplyCard v-for="university in universities" :key=university :icon=university.Logo :name=university.Name :site=university.WebsiteLink />
         </div>
     </section>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            universities: []
+        }
+    },
+    created() {
+        let uri = 'http://127.0.0.1:8000/universities';
+
+        this.axios.get(uri).then(res => {
+          console.log(res.data)
+          this.universities = res.data;
+        })
+    }
+}
+</script>
 
 <script setup>
     import UniApplyCard from '../components/UniApplyCard.vue'
