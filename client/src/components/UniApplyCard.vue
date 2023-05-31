@@ -10,7 +10,7 @@
                 <p class="title is-4">{{name}}</p>
             </div>
             <footer class="card-footer">
-                <a href="#" class="card-footer-item">Apply</a>
+                <a :href=application class="card-footer-item">Apply</a>
                 <a :href=site class="card-footer-item">Learn More</a>
             </footer>
         
@@ -20,10 +20,19 @@
 
 <script>
 export default {
+    data() {
+        return {
+            application: '/application'
+        }
+    },
     props: {
         name: String,
         icon: String,
         site: String,
+        uniId: String
+    },
+    created() {
+        this.application = this.application + `?id=${this.uniId}`
     }
 }
 </script>

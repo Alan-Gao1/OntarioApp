@@ -1,7 +1,7 @@
 <template>
     <section class="section">
         <div class="columns is-multiline">
-            <UniApplyCard v-for="university in universities" :key=university :icon=university.Logo :name=university.Name :site=university.WebsiteLink />
+            <UniApplyCard v-for="university in universities" :key=university :icon=university.Logo :name=university.Name :site=university.WebsiteLink :uniId=university.UniversityID />
         </div>
     </section>
 </template>
