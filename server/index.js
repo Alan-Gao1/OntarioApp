@@ -6,6 +6,8 @@ const app = express();
 require('dotenv').config();
 const PORT = 8000;
 
+const CONSTANTS = require('./constants.json')
+
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = process.env.MONGO_URI;
 
@@ -35,20 +37,21 @@ let db;
 var passport = require('passport');
 var LocalStrategy = require('passport-local');
 
-passport.use(new LocalStrategy(function verify(username, password, cb) {
-  db.get('SELECT * FROM users WHERE username = ?', [ username ], function(err, user) {
-    if (err) { return cb(err); }
-    if (!user) { return cb(null, false, { message: 'Incorrect username or password.' }); }
+// TODO: Probably make this work one day
+// passport.use(new LocalStrategy(function verify(username, password, cb) {
+//   db.get('', function(err, user) {
+//     if (err) { return cb(err); }
+//     if (!user) { return cb(null, false, { message: 'Incorrect username or password.' }); }
 
-    crypto.pbkdf2(password, user.salt, 310000, 32, 'sha256', function(err, hashedPassword) {
-      if (err) { return cb(err); }
-      if (!crypto.timingSafeEqual(user.hashed_password, hashedPassword)) {
-        return cb(null, false, { message: 'Incorrect username or password.' });
-      }
-      return cb(null, user);
-    });
-  });
-}));
+//     crypto.pbkdf2(password, user.salt, 310000, 32, 'sha256', function(err, hashedPassword) {
+//       if (err) { return cb(err); }
+//       if (!crypto.timingSafeEqual(user.hashed_password, hashedPassword)) {
+//         return cb(null, false, { message: 'Incorrect username or password.' });
+//       }
+//       return cb(null, user);
+//     });
+//   });
+// }));
 
 
 app.use(bodyParser.json());
@@ -60,13 +63,35 @@ app.get('/', (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-  req.body.email
+  req.body.email;
 
   res.send(false);
 });
 
 app.get('/universities', async(req, res) => {
   res.send(await getUnis());
+});
+
+app.get('/supplimental', async(req, res) => {
+  let index = req.query.uniId % 3;
+  res.send(CONSTANTS.Supplementals[index]);
+});
+
+app.get('/mock', (req, res) => {
+  res.send({
+    "UniversityID":0,
+    "Name":"ERROR",
+    "Description":"N/A",
+    "Address":["Street","City","Postal Code","Country"],
+    "Image":"",
+    "WebsiteLink":"#",
+    "Logo":"",
+    "Programs":["None"],
+    "AvgTuition":"N/A",
+    "Deposit":"N/A",
+    "Email":"N/A",
+    "Phone":"123-456-7890"
+  });
 });
 
 // listen on the port

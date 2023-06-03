@@ -1,0 +1,21 @@
+{
+    "mockUni": {
+        "UniversityID":0,
+        "Name":"ERROR",
+        "Description":"N/A",
+        "Address":["Street","City","Postal Code","Country"],
+        "Image":"",
+        "WebsiteLink":"#",
+        "Logo":"",
+        "Programs":["None"],
+        "AvgTuition":"N/A",
+        "Deposit":"N/A",
+        "Email":"N/A",
+        "Phone":"123-456-7890"
+    },
+    "Supplementals": [
+        "Describe a time when you witnessed something unjust. How would you respond to that situation now?",
+        "Describe a problem you've solved or a problem you'd like to solve. It can be an intellectual challenge, a research query, an ethical dilemma—anything that is of personal importance, no matter the scale. Explain its significance to you and what steps you took or could be taken to identify a solution.",
+        "Describe a topic, idea, or concept you find so engaging that it makes you lose all track of time. Why does it captivate you? What or who do you turn to when you want to learn more?"
+    ]
+}

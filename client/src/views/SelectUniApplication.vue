@@ -17,7 +17,6 @@ export default {
         let uri = 'http://127.0.0.1:8000/universities';
 
         this.axios.get(uri).then(res => {
-          console.log(res.data)
           this.universities = res.data;
         })
     }
