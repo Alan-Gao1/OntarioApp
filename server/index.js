@@ -18,7 +18,6 @@ const client = new MongoClient(uri, {
     deprecationErrors: true,
   }
 });
-let db;
 
 (async () => {
   try {
@@ -36,22 +35,6 @@ let db;
 
 var passport = require('passport');
 var LocalStrategy = require('passport-local');
-
-// TODO: Probably make this work one day
-// passport.use(new LocalStrategy(function verify(username, password, cb) {
-//   db.get('', function(err, user) {
-//     if (err) { return cb(err); }
-//     if (!user) { return cb(null, false, { message: 'Incorrect username or password.' }); }
-
-//     crypto.pbkdf2(password, user.salt, 310000, 32, 'sha256', function(err, hashedPassword) {
-//       if (err) { return cb(err); }
-//       if (!crypto.timingSafeEqual(user.hashed_password, hashedPassword)) {
-//         return cb(null, false, { message: 'Incorrect username or password.' });
-//       }
-//       return cb(null, user);
-//     });
-//   });
-// }));
 
 
 app.use(bodyParser.json());
@@ -140,20 +123,3 @@ const getUnis = async () => {
 
   return unis;
 }
-
-
-
-// Call this function to validate the JWT credential sent from client-side
-async function verifyCredentials(credential) {
-  const ticket = await Oauth.verifyIdToken({
-    idToken: credential,
-  })
-  const payload = ticket.getPayload()
-  return payload
-}
-
-verifyCredentials('JWT_CREDENTIAL_STRING_FROM_CLIENT_SIDE').then((userInfo) => {
-  // use userInfo and do your server-side logics here
-}).catch((error) => {
-  // validation failed and userinfo was not obtained
-})
