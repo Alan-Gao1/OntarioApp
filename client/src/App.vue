@@ -3,6 +3,7 @@
 </script>
 
 <template>
+    <div>
   <nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <router-link to="/" class="navbar-item"><img src="/images/logo.png"></router-link>
@@ -25,15 +26,15 @@
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <div class="buttons" id="login">
-                            <router-link to="/signup" class="button is-info">
+                            <!-- <router-link to="/signup" class="button is-info">
                                 <strong>Sign up</strong>
-                            </router-link>
-                            <router-link to="/login" class="button has-background-primary has-text-white">
+                            </router-link> -->
+                            <span @click="login" class="button has-background-primary has-text-white" v-bind:class="{'is-hidden': this.isAuth}">
                                 <strong>Log in</strong>
-                            </router-link>
-                            <router-link to="/" class="button is-info has-text-white is-hidden"> 
+                            </span>
+                            <span @click="logout" class="button is-info has-text-white" v-bind:class="{'is-hidden': !this.isAuth}"> 
                                 <strong>Logout</strong>
-                            </router-link>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -41,22 +42,31 @@
 
             </nav>
   <RouterView />
+  </div>
 </template>
 
 <script>
     export default {
         data() { 
             return {
-                isOpen: false
+                isOpen: false,
+                isAuth: this.$auth0.isAuthenticated
             }
         },
         methods: { 
-            onload() {
-                
+            login() {
+                this.$auth0.loginWithRedirect();
+            },
+            logout() {
+                this.$auth0.logout({
+                    logoutParams: {
+                        returnTo: 'http://127.0.0.1:5173'
+                    }
+                });
             }
         },
-        beforeMount() {
-            this.onload()
+        created() {
+            console.log(!!this.$auth0.isAuthenticated)
         }
     };
     

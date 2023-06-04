@@ -1,5 +1,5 @@
 <template>
-
+  <div>
     <!-- nav -->
 
         <div id="hamborg" class="is-hidden has-background-light" style="margin-left: 70%; z-index: -1; position: relative;">
@@ -176,23 +176,40 @@
 
         <!-- footer -->
     <footer>
-          <figure class="image">
-            <div class="is-overlay" style="margin: auto;width: fit-content;height: fit-content;">
-              <p id="footer-text">
-                
-                  <strong>OntarioApp</strong> by Teddy Porfiris, Alan Gao, Nathan Baroni, and Grant Bourne.
-                  Visit our <a href="https://github.com/Alan-Gao1/OntarioApp">GitHub page</a>!
-                  </p>
-                
-            </div>
+      <figure class="image">
+        <div class="is-overlay" style="margin: auto;width: fit-content;height: fit-content;">
+          <p id="footer-text">
             
-            <img src="/images/light-rectangle.png">
-          </figure>  
-        </footer>
+              <strong>OntarioApp</strong> by Teddy Porfiris, Alan Gao, Nathan Baroni, and Grant Bourne.
+              Visit our <a href="https://github.com/Alan-Gao1/OntarioApp">GitHub page</a>!
+              </p>
+            
+        </div>
+        
+        <img src="/images/light-rectangle.png">
+      </figure>  
+    </footer>
 
-
+  </div>
 
 </template>
+
+
+<script>
+  import { useAuth0 } from '@auth0/auth0-vue';
+
+  export default {
+    setup() {
+      const { loginWithRedirect } = useAuth0();
+
+      return {
+        login: () => {
+          loginWithRedirect();
+        }
+      };
+    }
+  };
+</script>
 
 <style scoped>
 
