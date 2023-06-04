@@ -401,11 +401,11 @@
                                 <div class="is-flex is-justify-content-space-between">
                                     <div>
                                         <div class="title">Dashboard</div>
-                                        <div class="subtitle is-6">Select a university to continue their application or start a new one!</div>
+                                        <div class="subtitle is-6">All submitted University applications will appear here.</div>
                                     </div>
                                     <router-link to="/apply"><button class="button is-info">Apply Now</button></router-link>
                                 </div>
-                                <UniCard name="University of ur mom" icon="/images/uoft-logo.png" isodate="2023-05-25T13:08:03+0000"/>
+                                <UniCard v-for="university in user.Universities.filter(uni => uni.Submitted == true)" :key=university :name=university.Name :icon=university.Logo :site=university.Site isodate="2023-05-25T13:08:03+0000"/>
                             </section>
                         </div>
                     </div>
@@ -423,8 +423,9 @@
         data() {
             return {
                 user: {},
-                isMale: false,
-                authUser: this.$auth0.user
+                authUser: this.$auth0.user,
+                email: '',
+                univerisities: []
             }
         },
         methods: {
@@ -459,18 +460,32 @@
                 this.axios.post(uri, {
                     newUser: this.user
                 });
-            }
+            },
+            removeApp() {
+
+            },
+
         },
         created() {
-            let uri = 'http://127.0.0.1:8000/user';
+            let userUri = 'http://127.0.0.1:8000/user';
 
-            this.axios.get(uri, {
+            if (this.authUser.email != undefined) sessionStorage.setItem("Email", this.authUser.email);
+
+            this.email = sessionStorage.getItem("Email");
+
+            this.axios.get(userUri, {
                 params: {
-                    userEmail: this.authUser.email
+                    userEmail: this.email
                 }
             }).then(res => {
                 this.user = res.data;
             });
+
+            let uniUri = 'http://127.0.0.1:8000/universities';
+
+            this.axios.get(uniUri).then(res => {
+                this.universities = res.data;
+            })
         }
 
     }

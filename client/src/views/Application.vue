@@ -37,8 +37,8 @@
                 <div class="field">
                     <div class="control">
                         <div class="select">
-                            <select>
-                                <option v-for="program in university.Programs" :key=program>
+                            <select v-model="user.Universities[uniIndex].Program">
+                                <option v-for="program in university.Programs" :key=program :value=program>
                                     {{program}}
                                 </option>
                             </select>
@@ -52,15 +52,15 @@
                 Supplemental Application
             </div>
             <div class="subtitle is-6">{{supplimental}} Max 2000 characters.</div>
-            <textarea class="textarea" rows="20" placeholder="Type here" maxlength="2000"></textarea>
+            <textarea class="textarea" rows="20" placeholder="Type here" maxlength="2000" v-model="user.Universities[uniIndex].Essay"></textarea>
         </div>
         <div class="save-submit mt-4">
             <div class="columns">
                 <div class="column">
-                    <button class="button is-primary is-fullwidth">Save</button>
+                    <button class="button is-primary is-fullwidth" @click="save()">Save</button>
                 </div>
                 <div class="column">
-                    <button class="button is-info is-fullwidth" title="Disabled button" disabled>Submit</button>
+                    <button class="button is-info is-fullwidth" :disabled="isNotValid()" @click="submit()">Submit</button>
                 </div>
             </div>
         </div>
@@ -73,18 +73,69 @@ export default {
         return {
             university: {},
             supplimental: "Loading...",
-            setSupp() {
-                let suppuri = 'http://127.0.0.1:8000/supplimental';
+            email: sessionStorage.getItem("Email"),
+            user: {},
+            uniIndex: 0
+        }
+    },
+    methods: {
+        setSupp() {
+            let suppuri = 'http://127.0.0.1:8000/supplimental';
 
-                this.axios.get(suppuri, {
-                    params: {
-                        uniId: this.university.UniversityID
-                    }
-                }).then(res => {
-                    console.log(res.data)
-                    this.supplimental = res.data;
-                });
-            }
+            this.axios.get(suppuri, {
+                params: {
+                    uniId: this.university.UniversityID
+                }
+            }).then(res => {
+                this.supplimental = res.data;
+            });
+        },
+        getUser() {
+            let userUri = 'http://127.0.0.1:8000/user';
+
+            this.axios.get(userUri, {
+                params: {
+                    userEmail: this.email
+                }
+            }).then(res => {
+                this.user = res.data;
+ 
+                this.uniIndex = res.data.Universities.findIndex(uni => uni.Id == this.$route.query.id);
+
+                if (this.uniIndex == -1) {
+                    this.uniIndex = this.user.Universities.length;
+                    this.user.Universities.push({
+                        "Id": this.$route.query.id,
+                        "Name": this.university.Name,
+                        "Logo": this.university.Logo,
+                        "Site": this.university.Site,
+                        "Essay": "",
+                        "Program": "",
+                        "Submitted": false
+                    });
+
+                    console.log(this.user.Universities)
+                }
+            });
+        },
+        submit() {
+            if (this.isNotValid()) return;
+
+            if (window.confirm(`Are you sure you are ready to submit? ${this.university.Name} will receive your application as it is now.`)) {
+                this.user.Universities[this.uniIndex].Submitted = true;
+                this.save();
+                this.$router.push('/dashboard')
+            } 
+        },
+        save() {
+            let uri = 'http://127.0.0.1:8000/updateuser';
+
+            this.axios.post(uri, {
+                newUser: this.user
+            });
+        },
+        isNotValid() {
+            return this.user.Universities[this.uniIndex].Essay.length < 10 || this.user.Universities[this.uniIndex] == '';
         }
     },
     created() {
@@ -96,11 +147,13 @@ export default {
             this.axios.get(mockuri).then(res => {
                 this.university = res.data;
                 this.setSupp();
+                this.getUser();
             });
         } else {
             this.axios.get(uri).then(res => {
                 this.university = res.data[index];
                 this.setSupp();
+                this.getUser();
             });
         }
     }
