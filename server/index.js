@@ -80,17 +80,13 @@ app.get('/supplimental', (req, res) => {
 app.get('/user', async(req, res) => {
   let email = req.query.userEmail;
 
-  console.log(email)
-
   if (!email) return res.send({});
-
-  console.log(req.query.userEmail)
   
   let user = await client.db('Ontariapp').collection('Students').findOne({"Email": email});
 
-  console.log(user)
+  console.info(`reading ${email}: \n${user}`)
 
-  if (!user) {
+  if (user == undefined) {
     user = CONSTANTS.baseStudent;
     user.Email = email;
     await client.db('Ontariapp').collection('Students').insertOne(user);
@@ -98,6 +94,19 @@ app.get('/user', async(req, res) => {
   } else {
     res.send(user);
   }
+});
+
+app.post('/updateuser', async(req, res) => {
+  let newUser = req.body.newUser;
+
+  delete newUser._id;
+
+  await client.db('Ontariapp').collection('Students').updateOne(
+    { "Email": newUser.Email },
+    { $set: newUser }
+  );
+
+  res.send(req.body);
 });
 
 app.get('/mock', (req, res) => {

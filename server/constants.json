@@ -36,22 +36,38 @@
                 "Leadership": "",
                 "Org": "",
                 "Description": "",
-                "Grades": []
+                "Grades": {
+                    "Nine": false,
+                    "Ten": false,
+                    "Eleven": false,
+                    "Twelve": false
+                }
             },
             {
                 "Type": "",
                 "Leadership": "",
                 "Org": "",
                 "Description": "",
-                "Grades": []
+                "Grades": {
+                    "Nine": false,
+                    "Ten": false,
+                    "Eleven": false,
+                    "Twelve": false
+                }
             },
             {
                 "Type": "",
                 "Leadership": "",
                 "Org": "",
                 "Description": "",
-                "Grades": []
+                "Grades": {
+                    "Nine": false,
+                    "Ten": false,
+                    "Eleven": false,
+                    "Twelve": false
+                }
             }
-        ]
+        ],
+        "Universities": []
     }
 }

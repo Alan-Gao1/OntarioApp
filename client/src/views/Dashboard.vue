@@ -17,7 +17,7 @@
                                             <div class="field">
                                                 <label class="label">Full Name</label>
                                                 <div class="control">
-                                                    <input class="input" type="text" placeholder="John Doe">
+                                                    <input class="input" type="text" placeholder="John Doe" v-model="user.Name">
                                                 </div>
                                             </div>
                                         </div>
@@ -26,7 +26,7 @@
                                             <div class="field">
                                                 <label class="label">Date of Birth</label>
                                                 <div class="control">
-                                                    <input class="input" type="date">
+                                                    <input class="input" type="date" v-model="user.Dob">
                                                 </div>
                                             </div>
                                         </div>
@@ -35,7 +35,7 @@
                                             <div class="field">
                                                 <label class="label">Address</label>
                                                 <div class="control">
-                                                    <input class="input" type="text" placeholder="1 Address rd.">
+                                                    <input class="input" type="text" placeholder="1 Address rd." v-model="user.Address">
                                                 </div>
                                             </div>
                                         </div>
@@ -44,7 +44,7 @@
                                             <div class="field">
                                                 <label class="label">Phone Number</label>
                                                 <div class="control">
-                                                    <input class="input" type="tel" placeholder="123-456-7890">
+                                                    <input class="input" type="tel" placeholder="123-456-7890" v-model="user.Phone">
                                                 </div>
                                             </div>
                                         </div>
@@ -54,11 +54,11 @@
                                                 <label class="label">Legal Sex</label>
                                                 <div class="control">
                                                     <label class="radio">
-                                                    <input type="radio" name="answer">
+                                                    <input type="radio" name="answer" value="Male" v-model="user.Sex">
                                                     Male
                                                     </label>
                                                     <label class="radio">
-                                                    <input type="radio" name="answer">
+                                                    <input type="radio" name="answer"  value="Female" v-model="user.Sex">
                                                     Female
                                                     </label>
                                                 </div>
@@ -70,12 +70,12 @@
                                                 <label class="label">Nationality</label>
                                                 <div class="control">
                                                     <div class="select">
-                                                        <select>
-                                                        <option>American Indian or Alaska Native</option>
-                                                        <option>Asian</option>
-                                                        <option>Black or African American</option>
-                                                        <option>Native Hawaiian or Other Pacific Islander</option>
-                                                        <option>White</option>
+                                                        <select v-model="user.Nationality">
+                                                            <option value="American Indian or Alaska Native">American Indian or Alaska Native</option>
+                                                            <option value="Asian">Asian</option>
+                                                            <option value="Black or African American">Black or African American</option>
+                                                            <option value="Native Hawaiian or Other Pacific Islander">Native Hawaiian or Other Pacific Islander</option>
+                                                            <option value="White">White</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -93,7 +93,7 @@
                                             <div class="field">
                                                 <label class="label">School Name</label>
                                                 <div class="control">
-                                                    <input class="input" type="text" placeholder="Ontario School">
+                                                    <input class="input" type="text" placeholder="Ontario School" v-model="user.School">
                                                 </div>
                                             </div>
                                         </div>
@@ -103,23 +103,13 @@
                                                 <label class="label">Did or will you graduate from this school?</label>
                                                 <div class="control">
                                                     <label class="radio">
-                                                    <input type="radio" name="answer">
+                                                    <input type="radio" name="answer" :value="true" v-model="user.Graduate">
                                                     Yes
                                                     </label>
                                                     <label class="radio">
-                                                    <input type="radio" name="answer">
+                                                    <input type="radio" name="answer" :value="false" v-model="user.Graduate">
                                                     No
                                                     </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                        
-
-                                        <div class="date-of-birth mt-3">
-                                            <div class="field">
-                                                <label class="label">Date of Graduation</label>
-                                                <div class="control">
-                                                    <input class="input" type="date">
                                                 </div>
                                             </div>
                                         </div>
@@ -128,7 +118,7 @@
                                             <div class="field">
                                                 <label class="label">Graduating Class Size</label>
                                                 <div class="control">
-                                                    <input class="input" type="number" placeholder="80">
+                                                    <input class="input" type="number" placeholder="80" v-model="user.GradSize">
                                                 </div>
                                             </div>
                                         </div>
@@ -137,7 +127,7 @@
                                             <div class="field">
                                                 <label class="label">Cumulative GPA</label>
                                                 <div class="control">
-                                                    <input class="input" type="number" placeholder="90">
+                                                    <input class="input" type="number" placeholder="90" v-model="user.GPA">
                                                 </div>
                                             </div>
                                         </div>
@@ -159,22 +149,22 @@
                                                     <label class="label">Activity Type</label>
                                                     <div class="control">
                                                         <div class="select">
-                                                            <select>
-                                                                <option>Academic</option>
-                                                                <option>Art</option>
-                                                                <option>Athletics</option>
-                                                                <option>Career Oriented</option>
-                                                                <option>Community Service</option>
-                                                                <option>Computer/Technology</option>
-                                                                <option>Cultural</option>
-                                                                <option>Environmental</option>
-                                                                <option>Family Responsibilities</option>
-                                                                <option>Internship</option>
-                                                                <option>Music</option>
-                                                                <option>Robotics</option>
-                                                                <option>Work</option>
+                                                            <select v-model="user.Activities[0].Type">
+                                                                <option value="Academic">Academic</option>
+                                                                <option value="Art">Art</option>
+                                                                <option value="Athletics">Athletics</option>
+                                                                <option value="Career Oriented">Career Oriented</option>
+                                                                <option value="Community Service">Community Service</option>
+                                                                <option value="Computer/Technology">Computer/Technology</option>
+                                                                <option value="Cultural">Cultural</option>
+                                                                <option value="Environmental">Environmental</option>
+                                                                <option value="Family Responsibilities">Family Responsibilities</option>
+                                                                <option value="Internship">Internship</option>
+                                                                <option value="Music">Music</option>
+                                                                <option value="Robotics">Robotics</option>
+                                                                <option value="Work">Work</option>
                                                             </select>
-                                                    </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -183,7 +173,7 @@
                                                 <div class="field">
                                                     <label class="label">Position/Leadership description</label>
                                                     <div class="control">
-                                                        <input class="input" type="text">
+                                                        <input class="input" type="text" v-model="user.Activities[0].Leadership">
                                                     </div>
                                                 </div>
                                             </div>
@@ -192,7 +182,7 @@
                                                 <div class="field">
                                                     <label class="label">Organization Name</label>
                                                     <div class="control">
-                                                        <input class="input" type="text">
+                                                        <input class="input" type="text" v-model="user.Activities[0].Org">
                                                     </div>
                                                 </div>
                                             </div>
@@ -201,7 +191,7 @@
                                                 <div class="field">
                                                     <label class="label">Activity Description</label>
                                                     <div class="control">
-                                                        <textarea class="textarea"></textarea>
+                                                        <textarea class="textarea" maxlength="500" v-model="user.Activities[0].Description"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -210,20 +200,20 @@
                                             <div class="field">
                                                 <label class="label">Participation Grade Levels</label>
                                                 <div class="control">
-                                                    <label class="checkbox">
-                                                        <input type="checkbox">
+                                                    <label class="checkbox" >
+                                                        <input type="checkbox" v-model="user.Activities[0].Grades.Nine">
                                                         Grade 9
                                                     </label><br>
                                                     <label class="checkbox mt-2">
-                                                        <input type="checkbox">
+                                                        <input type="checkbox" v-model="user.Activities[0].Grades.Ten">
                                                         Grade 10
                                                     </label><br>
                                                     <label class="checkbox mt-2">
-                                                        <input type="checkbox">
+                                                        <input type="checkbox" v-model="user.Activities[0].Grades.Eleven">
                                                         Grade 11
                                                     </label><br>
                                                     <label class="checkbox mt-2">
-                                                        <input type="checkbox">
+                                                        <input type="checkbox" v-model="user.Activities[0].Grades.Twelve">
                                                         Grade 12
                                                     </label>
                                                 </div>
@@ -240,22 +230,22 @@
                                                     <label class="label">Activity Type</label>
                                                     <div class="control">
                                                         <div class="select">
-                                                            <select>
-                                                                <option>Academic</option>
-                                                                <option>Art</option>
-                                                                <option>Athletics</option>
-                                                                <option>Career Oriented</option>
-                                                                <option>Community Service</option>
-                                                                <option>Computer/Technology</option>
-                                                                <option>Cultural</option>
-                                                                <option>Environmental</option>
-                                                                <option>Family Responsibilities</option>
-                                                                <option>Internship</option>
-                                                                <option>Music</option>
-                                                                <option>Robotics</option>
-                                                                <option>Work</option>
+                                                            <select v-model="user.Activities[1].Type">
+                                                                <option value="Academic">Academic</option>
+                                                                <option value="Art">Art</option>
+                                                                <option value="Athletics">Athletics</option>
+                                                                <option value="Career Oriented">Career Oriented</option>
+                                                                <option value="Community Service">Community Service</option>
+                                                                <option value="Computer/Technology">Computer/Technology</option>
+                                                                <option value="Cultural">Cultural</option>
+                                                                <option value="Environmental">Environmental</option>
+                                                                <option value="Family Responsibilities">Family Responsibilities</option>
+                                                                <option value="Internship">Internship</option>
+                                                                <option value="Music">Music</option>
+                                                                <option value="Robotics">Robotics</option>
+                                                                <option value="Work">Work</option>
                                                             </select>
-                                                    </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -264,7 +254,7 @@
                                                 <div class="field">
                                                     <label class="label">Position/Leadership description</label>
                                                     <div class="control">
-                                                        <input class="input" type="text">
+                                                        <input class="input" type="text" v-model="user.Activities[1].Leadership">
                                                     </div>
                                                 </div>
                                             </div>
@@ -273,7 +263,7 @@
                                                 <div class="field">
                                                     <label class="label">Organization Name</label>
                                                     <div class="control">
-                                                        <input class="input" type="text">
+                                                        <input class="input" type="text" v-model="user.Activities[1].Org">
                                                     </div>
                                                 </div>
                                             </div>
@@ -282,7 +272,7 @@
                                                 <div class="field">
                                                     <label class="label">Activity Description</label>
                                                     <div class="control">
-                                                        <textarea class="textarea"></textarea>
+                                                        <textarea class="textarea" maxlength="500" v-model="user.Activities[1].Description"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -291,20 +281,20 @@
                                             <div class="field">
                                                 <label class="label">Participation Grade Levels</label>
                                                 <div class="control">
-                                                    <label class="checkbox">
-                                                        <input type="checkbox">
+                                                    <label class="checkbox" >
+                                                        <input type="checkbox" v-model="user.Activities[1].Grades.Nine">
                                                         Grade 9
                                                     </label><br>
                                                     <label class="checkbox mt-2">
-                                                        <input type="checkbox">
+                                                        <input type="checkbox" v-model="user.Activities[1].Grades.Ten">
                                                         Grade 10
                                                     </label><br>
                                                     <label class="checkbox mt-2">
-                                                        <input type="checkbox">
+                                                        <input type="checkbox" v-model="user.Activities[1].Grades.Eleven">
                                                         Grade 11
                                                     </label><br>
                                                     <label class="checkbox mt-2">
-                                                        <input type="checkbox">
+                                                        <input type="checkbox" v-model="user.Activities[1].Grades.Twelve">
                                                         Grade 12
                                                     </label>
                                                 </div>
@@ -321,22 +311,22 @@
                                                     <label class="label">Activity Type</label>
                                                     <div class="control">
                                                         <div class="select">
-                                                            <select>
-                                                                <option>Academic</option>
-                                                                <option>Art</option>
-                                                                <option>Athletics</option>
-                                                                <option>Career Oriented</option>
-                                                                <option>Community Service</option>
-                                                                <option>Computer/Technology</option>
-                                                                <option>Cultural</option>
-                                                                <option>Environmental</option>
-                                                                <option>Family Responsibilities</option>
-                                                                <option>Internship</option>
-                                                                <option>Music</option>
-                                                                <option>Robotics</option>
-                                                                <option>Work</option>
+                                                            <select v-model="user.Activities[2].Type">
+                                                                <option value="Academic">Academic</option>
+                                                                <option value="Art">Art</option>
+                                                                <option value="Athletics">Athletics</option>
+                                                                <option value="Career Oriented">Career Oriented</option>
+                                                                <option value="Community Service">Community Service</option>
+                                                                <option value="Computer/Technology">Computer/Technology</option>
+                                                                <option value="Cultural">Cultural</option>
+                                                                <option value="Environmental">Environmental</option>
+                                                                <option value="Family Responsibilities">Family Responsibilities</option>
+                                                                <option value="Internship">Internship</option>
+                                                                <option value="Music">Music</option>
+                                                                <option value="Robotics">Robotics</option>
+                                                                <option value="Work">Work</option>
                                                             </select>
-                                                    </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -345,7 +335,7 @@
                                                 <div class="field">
                                                     <label class="label">Position/Leadership description</label>
                                                     <div class="control">
-                                                        <input class="input" type="text">
+                                                        <input class="input" type="text" v-model="user.Activities[2].Leadership">
                                                     </div>
                                                 </div>
                                             </div>
@@ -354,7 +344,7 @@
                                                 <div class="field">
                                                     <label class="label">Organization Name</label>
                                                     <div class="control">
-                                                        <input class="input" type="text">
+                                                        <input class="input" type="text" v-model="user.Activities[2].Org">
                                                     </div>
                                                 </div>
                                             </div>
@@ -363,7 +353,7 @@
                                                 <div class="field">
                                                     <label class="label">Activity Description</label>
                                                     <div class="control">
-                                                        <textarea class="textarea"></textarea>
+                                                        <textarea class="textarea" maxlength="500" v-model="user.Activities[2].Description"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -372,20 +362,20 @@
                                             <div class="field">
                                                 <label class="label">Participation Grade Levels</label>
                                                 <div class="control">
-                                                    <label class="checkbox">
-                                                        <input type="checkbox">
+                                                    <label class="checkbox" >
+                                                        <input type="checkbox" v-model="user.Activities[2].Grades.Nine">
                                                         Grade 9
                                                     </label><br>
                                                     <label class="checkbox mt-2">
-                                                        <input type="checkbox">
+                                                        <input type="checkbox" v-model="user.Activities[2].Grades.Ten">
                                                         Grade 10
                                                     </label><br>
                                                     <label class="checkbox mt-2">
-                                                        <input type="checkbox">
+                                                        <input type="checkbox" v-model="user.Activities[2].Grades.Eleven">
                                                         Grade 11
                                                     </label><br>
                                                     <label class="checkbox mt-2">
-                                                        <input type="checkbox">
+                                                        <input type="checkbox" v-model="user.Activities[2].Grades.Twelve">
                                                         Grade 12
                                                     </label>
                                                 </div>
@@ -401,7 +391,7 @@
                         </div>
 
                         <div class="container mt-3">
-                            <button class="button is-primary is-fullwidth">Save</button>
+                            <button class="button is-primary is-fullwidth" @click="saveUser()">Save</button>
                         </div>
                     </div>
 
@@ -433,6 +423,7 @@
         data() {
             return {
                 user: {},
+                isMale: false,
                 authUser: this.$auth0.user
             }
         },
@@ -461,12 +452,17 @@
                 } else {
                      content.style.display = "block";
                 }
+            },
+            saveUser() {
+                let uri = 'http://127.0.0.1:8000/updateuser';
+
+                this.axios.post(uri, {
+                    newUser: this.user
+                });
             }
         },
         created() {
             let uri = 'http://127.0.0.1:8000/user';
-
-            console.log(this.authUser.email)
 
             this.axios.get(uri, {
                 params: {
@@ -474,7 +470,7 @@
                 }
             }).then(res => {
                 this.user = res.data;
-            })
+            });
         }
 
     }
