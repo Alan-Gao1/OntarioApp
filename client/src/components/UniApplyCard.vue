@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-image">
                 <figure class="image is-4by3">
-                <img :src=icon alt="Placeholder image">
+                    <img class="unimage" :src=icon alt="Placeholder image">
                 </figure>
             </div>
             <div class="card-content">
@@ -36,3 +36,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.unimage {
+    object-fit: contain;
+}
+</style>

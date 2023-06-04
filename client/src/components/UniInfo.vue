@@ -29,8 +29,8 @@
                 </div>
                 </div>
         </div>
-        <div class="column">
-            <img :src=image>
+        <div class="column is-flex is-vcentered">
+            <img class="unimage" :src=image>
         </div>
     </div>
 </template>
@@ -47,3 +47,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.unimage {
+    object-fit: contain;
+}
+</style>
