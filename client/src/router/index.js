@@ -14,16 +14,6 @@ const router = createRouter({
       component: () => import('../views/Search.vue')
     },
     {
-      path: '/signup',
-      name: 'signup',
-      component: () => import('../views/Signup.vue')
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: () => import('../views/Login.vue')
-    },
-    {
       path: '/dashboard',
       name: 'dashboard',
       component: () => import('../views/Dashboard.vue')
@@ -40,6 +30,11 @@ const router = createRouter({
     },
     
   ]
-})
+});
+
+// router.beforeEach((to, from) => {
+//   if (to.name == 'search' || to.name == 'home') return true;
+//   else return this.$auth0.isAuthenticated;
+// });
 
 export default router

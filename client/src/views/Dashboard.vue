@@ -141,18 +141,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <div class="transcript mt-3">
-                                            <div class="field">
-                                                <label class="label">Upload Transcript</label>
-                                                <div class="control">
-                                                    <div class="upload-file">
-                                                        <input type="file" id="myFile" hidden>
-                                                        <label for="myFile">Choose File</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>    
                                     </section>
                                 </div>
 
@@ -425,7 +413,7 @@
                                         <div class="title">Dashboard</div>
                                         <div class="subtitle is-6">Select a university to continue their application or start a new one!</div>
                                     </div>
-                                    <button class="button is-info">Apply Now</button>
+                                    <router-link to="/apply"><button class="button is-info">Apply Now</button></router-link>
                                 </div>
                                 <UniCard name="University of ur mom" icon="/images/uoft-logo.png" isodate="2023-05-25T13:08:03+0000"/>
                             </section>
@@ -443,7 +431,10 @@
 <script>
     export default{
         data() {
-            return {}
+            return {
+                user: {},
+                authUser: this.$auth0.user
+            }
         },
         methods: {
             openDash() {
@@ -471,6 +462,19 @@
                      content.style.display = "block";
                 }
             }
+        },
+        created() {
+            let uri = 'http://127.0.0.1:8000/user';
+
+            console.log(this.authUser.email)
+
+            this.axios.get(uri, {
+                params: {
+                    userEmail: this.authUser.email
+                }
+            }).then(res => {
+                this.user = res.data;
+            })
         }
 
     }

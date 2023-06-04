@@ -66,7 +66,7 @@
             }
         },
         created() {
-            console.log(!!this.$auth0.isAuthenticated)
+            // console.log(this.user)
         }
     };
     

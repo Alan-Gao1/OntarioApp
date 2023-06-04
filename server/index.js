@@ -72,9 +72,32 @@ app.get('/universities', async(req, res) => {
   res.send(await getUnis());
 });
 
-app.get('/supplimental', async(req, res) => {
+app.get('/supplimental', (req, res) => {
   let index = req.query.uniId % 3;
   res.send(CONSTANTS.Supplementals[index]);
+});
+
+app.get('/user', async(req, res) => {
+  let email = req.query.userEmail;
+
+  console.log(email)
+
+  if (!email) return res.send({});
+
+  console.log(req.query.userEmail)
+  
+  let user = await client.db('Ontariapp').collection('Students').findOne({"Email": email});
+
+  console.log(user)
+
+  if (!user) {
+    user = CONSTANTS.baseStudent;
+    user.Email = email;
+    await client.db('Ontariapp').collection('Students').insertOne(user);
+    res.send(user);
+  } else {
+    res.send(user);
+  }
 });
 
 app.get('/mock', (req, res) => {
