@@ -58,6 +58,7 @@
                 this.$auth0.loginWithRedirect();
             },
             logout() {
+                sessionStorage.clear();
                 this.$auth0.logout({
                     logoutParams: {
                         returnTo: 'http://127.0.0.1:5173'

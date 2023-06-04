@@ -8,10 +8,9 @@
                     </figure>
                 </div>
                 <div class="media-content">
-                    <p class="title is-3"><a href="#">{{name}}</a></p>
+                    <p class="title is-3"><a :href=site>{{name}}</a></p>
                     <p class="subtitle is-6">{{response}}</p>
                 </div>
-                <button class="delete"></button>
             </div>
         </div>
     </div>
@@ -27,7 +26,8 @@ export default {
     props: {
         name: String,
         icon: String,
-        isodate: String
+        isodate: String,
+        site: String
     },
     created() {
         let responseDate = new Date(this.isodate);

@@ -9,12 +9,12 @@
                 <h1 class="title mr-4">Search for Universities</h1>
             </div>
             <div class="field">
-                <input class="input" type="text" placeholder="Ex. University of Toronto">
+                <input class="input" type="text" placeholder="Ex. University of Toronto" v-model="search">
             </div>
         </section>
 
         <section class="section">
-            <UniInfo v-for="university in universities" :key=university :name=university.Name :icon=university.Logo :image=university.Image :site=university.WebsiteLink :description=university.Description :programs=university.Programs />
+            <UniInfo v-for="university in filteredUnis" :key=university :name=university.Name :icon=university.Logo :image=university.Image :site=university.WebsiteLink :description=university.Description :programs=university.Programs />
         </section>
   </div>
 </template>
@@ -23,7 +23,8 @@
 export default {
     data() {
         return {
-            universities: []
+            universities: [],
+            search: ''
         }
     },
     created() {
@@ -32,7 +33,14 @@ export default {
         this.axios.get(uri).then(res => {
           this.universities = res.data;
         })
-    }
+    },
+    computed: {
+        filteredUnis() {
+            return this.universities.filter(uni => {
+                return uni.Name.toLowerCase().includes(this.search.toLowerCase())
+            })
+        }
+  }
 }
 </script>
 
