@@ -29,10 +29,10 @@
                             <!-- <router-link to="/signup" class="button is-info">
                                 <strong>Sign up</strong>
                             </router-link> -->
-                            <span @click="login" class="button has-background-primary has-text-white" v-bind:class="{'is-hidden': this.isAuth}">
+                            <span @click="login" class="button has-background-primary has-text-white" v-bind:class="{'is-hidden': this.isAuth != undefined && this.isAuth}">
                                 <strong>Log in</strong>
                             </span>
-                            <span @click="logout" class="button is-info has-text-white" v-bind:class="{'is-hidden': !this.isAuth}"> 
+                            <span @click="logout" class="button is-info has-text-white" v-bind:class="{'is-hidden': this.isAuth == undefined || !this.isAuth}"> 
                                 <strong>Logout</strong>
                             </span>
                         </div>
@@ -50,7 +50,7 @@
         data() { 
             return {
                 isOpen: false,
-                isAuth: this.$auth0.isAuthenticated
+                isAuth: Boolean(this.$auth0.isAuthenticated)
             }
         },
         methods: { 
