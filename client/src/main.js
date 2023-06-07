@@ -16,7 +16,7 @@ app.use(
         domain: import.meta.env.VITE_AUTH_DOMAIN,
         clientId: import.meta.env.VITE_AUTH_CID,
         authorizationParams: {
-            redirect_uri: 'http://127.0.0.1:5173/dashboard'
+            redirect_uri: 'https://ontarioapp.onrender.com/dashboard'
         }
     })
 );

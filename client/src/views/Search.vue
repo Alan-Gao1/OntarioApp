@@ -28,7 +28,7 @@ export default {
         }
     },
     created() {
-        let uri = 'http://127.0.0.1:8000/universities';
+        let uri = 'https://ontarioapp-backend.onrender.com/universities';
 
         this.axios.get(uri).then(res => {
           this.universities = res.data;

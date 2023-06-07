@@ -80,7 +80,7 @@ export default {
     },
     methods: {
         setSupp() {
-            let suppuri = 'http://127.0.0.1:8000/supplimental';
+            let suppuri = 'https://ontarioapp-backend.onrender.com/supplimental';
 
             this.axios.get(suppuri, {
                 params: {
@@ -91,7 +91,7 @@ export default {
             });
         },
         getUser() {
-            let userUri = 'http://127.0.0.1:8000/user';
+            let userUri = 'https://ontarioapp-backend.onrender.com/user';
 
             this.axios.get(userUri, {
                 params: {
@@ -128,7 +128,7 @@ export default {
             } 
         },
         save() {
-            let uri = 'http://127.0.0.1:8000/updateuser';
+            let uri = 'https://ontarioapp-backend.onrender.com/updateuser';
 
             this.axios.post(uri, {
                 newUser: this.user
@@ -139,8 +139,8 @@ export default {
         }
     },
     created() {
-        let uri = 'http://127.0.0.1:8000/universities';
-        let mockuri = 'http://127.0.0.1:8000/mock';
+        let uri = 'https://ontarioapp-backend.onrender.com/universities';
+        let mockuri = 'https://ontarioapp-backend.onrender.com/mock';
         let index = parseInt(this.$route.query.id);
 
         if (!index) {

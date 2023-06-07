@@ -455,7 +455,7 @@
                 }
             },
             saveUser() {
-                let uri = 'http://127.0.0.1:8000/updateuser';
+                let uri = 'https://ontarioapp-backend.onrender.com/updateuser';
 
                 this.axios.post(uri, {
                     newUser: this.user
@@ -467,7 +467,7 @@
 
         },
         created() {
-            let userUri = 'http://127.0.0.1:8000/user';
+            let userUri = 'https://ontarioapp-backend.onrender.com/user';
 
             if (this.authUser.email != undefined) sessionStorage.setItem("Email", this.authUser.email);
 
@@ -481,7 +481,7 @@
                 this.user = res.data;
             });
 
-            let uniUri = 'http://127.0.0.1:8000/universities';
+            let uniUri = 'https://ontarioapp-backend.onrender.com/universities';
 
             this.axios.get(uniUri).then(res => {
                 this.universities = res.data;
