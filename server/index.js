@@ -52,6 +52,7 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/universities', async(req, res) => {
+  console.log("getting universities")
   res.send(await getUnis());
 });
 

@@ -1,5 +1,5 @@
 <template>
-            <section class="section">
+            <section v-if="recoursesloaded" class="section">
                 <div class="columns">
                     <div class="column">
                         <button class="button is-info is-fullwidth" v-on:click="openOntarioapp">OntarioApp</button>
@@ -425,7 +425,8 @@
                 user: {},
                 authUser: this.$auth0.user,
                 email: '',
-                univerisities: []
+                univerisities: [],
+                recoursesloaded: false
             }
         },
         methods: {
@@ -485,6 +486,7 @@
 
             this.axios.get(uniUri).then(res => {
                 this.universities = res.data;
+                this.recoursesloaded = true;
             })
         }
 

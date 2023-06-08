@@ -20,6 +20,7 @@
             <div class="navbar-menu" v-bind:class="{'is-active': isOpen}">
                 <div class="navbar-start">
                     <router-link to="/" class="navbar-item is-tab">Home</router-link>
+                    <router-link to="/dashboard" class="navbar-item is-tab" v-bind:class="{'is-hidden': !this.isAuth}">Dashboard</router-link>
                     <router-link to="/search" class="navbar-item is-tab">Search for Universities</router-link>
                 </div>
 

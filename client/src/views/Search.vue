@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="hasloaded">
         <!-- nav -->
     
 
@@ -24,7 +24,8 @@ export default {
     data() {
         return {
             universities: [],
-            search: ''
+            search: '',
+            hasloaded: false
         }
     },
     created() {
@@ -32,6 +33,7 @@ export default {
 
         this.axios.get(uri).then(res => {
           this.universities = res.data;
+          this.hasloaded = true;
         })
     },
     computed: {
